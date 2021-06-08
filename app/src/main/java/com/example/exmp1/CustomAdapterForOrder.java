@@ -3,6 +3,7 @@ package com.example.exmp1;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.exmp1.db.CustomAdapter;
@@ -48,18 +51,12 @@ public class CustomAdapterForOrder extends RecyclerView.Adapter<CustomAdapterFor
         holder.quantity_txt.setText(displayData.get(position).getQuantityData());
         holder.units_txt.setText(displayData.get(position).getUnitsData());
         holder.sellingPrice_txt.setText(displayData.get(position).getSellingPriceData());
-        /*holder.mainLayout.setOnClickListener(v -> {
-            Intent intent = new Intent(context, UpdateItemActivity.class);
-            intent.putExtra("id", displayData.get(position).getProductId());
-            intent.putExtra("product", displayData.get(position).getProductData());
-            intent.putExtra("group", displayData.get(position).getGroupData());
-            intent.putExtra("quantity", displayData.get(position).getQuantityData());
-            intent.putExtra("units", displayData.get(position).getUnitsData());
-            intent.putExtra("price", displayData.get(position).getPriceData());
-            intent.putExtra("charge", displayData.get(position).getExtraChargeData());
-            activity.startActivityForResult(intent,1);
+        holder.mainLayout.setOnClickListener(v -> {
 
-        });*/
+            Intent intent = new Intent(context, OrderItemSelected.class);
+            intent.putExtra("productData", displayData.get(position));
+            activity.startActivityForResult(intent,1);
+        });
     }
 
     @Override

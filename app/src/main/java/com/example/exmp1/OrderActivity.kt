@@ -24,7 +24,6 @@ class OrderActivity : AppCompatActivity() {
     private val allProductData : ArrayList<DbData> = arrayListOf()
     private val displayList : ArrayList<DbData> = arrayListOf()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order)

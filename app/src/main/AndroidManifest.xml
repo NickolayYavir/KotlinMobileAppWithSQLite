@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Exmp1">
-        <activity android:name=".OrderActivity"></activity>
+        <activity android:name=".OrderItemSelected"
+            android:label="Order Item"
+            android:parentActivityName=".OrderActivity"/>
+        <activity
+            android:name=".OrderActivity"
+            android:label="Order"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".db.AddItemToBdActivity"
             android:label="Add item"
