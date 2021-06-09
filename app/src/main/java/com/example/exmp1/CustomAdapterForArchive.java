@@ -17,7 +17,9 @@ import com.example.exmp1.db.DbOrderData;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.TimeZone;
 
 public class CustomAdapterForArchive extends RecyclerView.Adapter<CustomAdapterForArchive.ArchiveViewHolder>  {
 
@@ -42,10 +44,16 @@ public class CustomAdapterForArchive extends RecyclerView.Adapter<CustomAdapterF
     public void onBindViewHolder(@NonNull @NotNull ArchiveViewHolder holder, int position) {
         holder.product_txt.setText(displayData.get(position).getProductData());
         holder.group_txt.setText(displayData.get(position).getGroupData());
-        holder.quantity_txt.setText(displayData.get(position).getQuantityData());
+        holder.quantity_txt.setText(Integer.toString(displayData.get(position).getQuantityData()));
         holder.units_txt.setText(displayData.get(position).getUnitsData());
-        holder.totalSellingPrice_txt.setText(displayData.get(position).getSellingPriceData());
-        holder.date_txt.setText(displayData.get(position).getSellingDate());
+
+        float totalCost = displayData.get(position).getSellingPriceData() * displayData.get(position).getQuantityData();
+        holder.totalSellingPrice_txt.setText(Float.toString(totalCost));
+
+        java.util.Date time = new java.util.Date((displayData.get(position).getSellingDate()));
+        SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd");
+        sdf.setTimeZone(TimeZone.getDefault());
+        holder.date_txt.setText(sdf.format(time));
     }
 
     @Override

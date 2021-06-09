@@ -28,7 +28,7 @@ object MyDbOrderClass : BaseColumns {
             "$COLUMN_NAME_PRICE REAL,"+
             "$COLUMN_NAME_EXTRA_CHARGE INTEGER,"+
             "$COLUMN_SELLING_PRICE REAL,"+
-            "$COLUMN_SELLING_DATE TEXT)"
+            "$COLUMN_SELLING_DATE INTEGER)"
 
 
     const val SQL_DELETE_TABLE = "DROP TABLE IF EXISTS $TABLE_NAME"

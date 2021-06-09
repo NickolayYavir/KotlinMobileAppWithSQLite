@@ -1,5 +1,6 @@
 package com.example.exmp1
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
@@ -18,6 +19,8 @@ import java.util.*
 class OrderItemSelected : AppCompatActivity() {
 
     private var allProductData : ArrayList<DbData> = arrayListOf()
+
+    @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -27,7 +30,7 @@ class OrderItemSelected : AppCompatActivity() {
         // calendar datePicker
         editTextDate.setText(SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date()))
         val myCalendar = Calendar.getInstance()
-        var maxDate: Date? = null
+        val maxDate: Date? = null
         val datePickerOnDataSetListener =
             DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
                 myCalendar.set(Calendar.YEAR, year)
@@ -51,7 +54,6 @@ class OrderItemSelected : AppCompatActivity() {
         val customAdapter = CustomAdapterForOrderItemSelected(this,allProductData)
         recyclerViewOrderItemSelected.adapter = customAdapter
         recyclerViewOrderItemSelected.layoutManager = LinearLayoutManager(this)
-
     }
 
     private fun getAndSetIntentData() {
@@ -80,7 +82,8 @@ class OrderItemSelected : AppCompatActivity() {
             val myOrderDbManager = MyOrderDbManager(this)
             myOrderDbManager.openDb()
             myOrderDbManager.insertToDb(allProductData[0].productData,allProductData[0].groupData,Integer.parseInt(quantityInput.text.toString()),
-                allProductData[0].unitsData,allProductData[0].priceData.toFloat(),allProductData[0].extraChargeData.toInt(),editTextDate.text.toString())
+                allProductData[0].unitsData,allProductData[0].priceData.toFloat(),allProductData[0].extraChargeData.toInt(),
+                ((SimpleDateFormat("yyyy-MM-dd").parse(editTextDate.text.toString()) as Date).time))
             myOrderDbManager.closeDb()
 
             Toast.makeText(this, "Successful", Toast.LENGTH_SHORT).show()
@@ -90,7 +93,6 @@ class OrderItemSelected : AppCompatActivity() {
             Toast.makeText(this, "Failed! You selected equals ZERO", Toast.LENGTH_SHORT).show()
         }
         else{  Toast.makeText(this, "Failed! Not enough goods", Toast.LENGTH_SHORT).show() }
-
 
     }
 

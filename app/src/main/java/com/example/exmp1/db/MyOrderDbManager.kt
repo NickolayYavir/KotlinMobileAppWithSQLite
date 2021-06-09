@@ -14,7 +14,7 @@ class MyOrderDbManager(private val context: Context) {
     fun openDb(){
         db = myDbHelper.writableDatabase
     }
-    fun insertToDb( product: String, groupName: String, quantity: Int, units: String, price: Float, extraCharge: Int, date: String){
+    fun insertToDb( product: String, groupName: String, quantity: Int, units: String, price: Float, extraCharge: Int, date: Long){
         val values = ContentValues().apply {
             put(MyDbOrderClass.COLUMN_NAME_PRODUCT, product)
             put(MyDbOrderClass.COLUMN_NAME_GROUP, groupName)
@@ -45,12 +45,12 @@ class MyOrderDbManager(private val context: Context) {
             val dataId = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_ID))
             val dataProduct = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_PRODUCT))
             val dataGroup = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_GROUP))
-            val dataQuantity = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_QUANTITY))
+            val dataQuantity = cursor.getInt(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_QUANTITY))
             val dataUnits = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_UNITS))
             val dataPrice = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_PRICE))
             val dataCharge = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_EXTRA_CHARGE))
-            val dataSellingPrice = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_SELLING_PRICE))
-            val dataSellingDate = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_SELLING_DATE))
+            val dataSellingPrice = cursor.getFloat(cursor.getColumnIndex(MyDbOrderClass.COLUMN_SELLING_PRICE))
+            val dataSellingDate = cursor.getLong(cursor.getColumnIndex(MyDbOrderClass.COLUMN_SELLING_DATE))
             dataList.add(DbOrderData(dataId,dataProduct,dataGroup,dataQuantity,dataUnits,dataPrice,dataCharge,dataSellingPrice,dataSellingDate))
         }
         cursor.close()
@@ -65,19 +65,19 @@ class MyOrderDbManager(private val context: Context) {
             val dataId = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_ID))
             val dataProduct = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_PRODUCT))
             val dataGroup = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_GROUP))
-            val dataQuantity = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_QUANTITY))
+            val dataQuantity = cursor.getInt(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_QUANTITY))
             val dataUnits = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_UNITS))
             val dataPrice = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_PRICE))
             val dataCharge = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_EXTRA_CHARGE))
-            val dataSellingPrice = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_SELLING_PRICE))
-            val dataSellingDate = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_SELLING_DATE))
+            val dataSellingPrice = cursor.getFloat(cursor.getColumnIndex(MyDbOrderClass.COLUMN_SELLING_PRICE))
+            val dataSellingDate = cursor.getLong(cursor.getColumnIndex(MyDbOrderClass.COLUMN_SELLING_DATE))
             dataList.add(DbOrderData(dataId,dataProduct,dataGroup,dataQuantity,dataUnits,dataPrice,dataCharge,dataSellingPrice,dataSellingDate))
         }
         cursor.close()
         return dataList
     }
 
-    fun updateData(row_id: String, product: String, groupName: String, quantity: Int, units: String, price: Float, extraCharge: Int, date: String) {
+    fun updateData(row_id: String, product: String, groupName: String, quantity: Int, units: String, price: Float, extraCharge: Int, date: Long) {
         val values = ContentValues().apply {
             put(MyDbOrderClass.COLUMN_NAME_PRODUCT, product)
             put(MyDbOrderClass.COLUMN_NAME_GROUP, groupName)
