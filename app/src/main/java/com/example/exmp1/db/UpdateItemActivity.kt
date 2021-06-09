@@ -32,7 +32,8 @@ class UpdateItemActivity : AppCompatActivity() {
         }catch (e: Exception){
             Toast.makeText(this, "Failed! Wrong data input", Toast.LENGTH_SHORT).show()
         }
-
+        val intent = Intent(this, BdActivity::class.java)
+        startActivity(intent)
     }
 
     fun onClickDelete(view: View) {

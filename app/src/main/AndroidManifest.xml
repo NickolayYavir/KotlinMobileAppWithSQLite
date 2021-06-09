@@ -9,9 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Exmp1">
-        <activity android:name=".OrderItemSelected"
+        <activity
+            android:name=".ArchiveActivity"
+            android:label="Archive"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".OrderItemSelected"
             android:label="Order Item"
-            android:parentActivityName=".OrderActivity"/>
+            android:parentActivityName=".OrderActivity" />
         <activity
             android:name=".OrderActivity"
             android:label="Order"
