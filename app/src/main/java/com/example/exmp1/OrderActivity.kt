@@ -2,7 +2,6 @@ package com.example.exmp1
 
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
@@ -75,15 +74,6 @@ class OrderActivity : AppCompatActivity() {
 
         })
         return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        if(item.itemId == R.id.sort_table_Order){
-           // val dialog = SortDialogFragment()
-            //dialog.show(supportFragmentManager, "sortDialog")
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     private fun storeDataInArrays(dataList :ArrayList<DbData>) {
