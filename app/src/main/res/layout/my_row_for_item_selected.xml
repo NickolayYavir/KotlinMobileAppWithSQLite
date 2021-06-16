@@ -27,7 +27,7 @@
                 android:layout_marginTop="70dp"
                 android:layout_marginEnd="6dp"
                 android:layout_marginRight="6dp"
-                android:text="Selected:"
+                android:text="@string/selected"
                 app:layout_constraintEnd_toStartOf="@+id/textInputLayout"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,7 +79,7 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginLeft="4dp"
                 android:layout_marginTop="6dp"
-                android:text="Selling Price:"
+                android:text="@string/selling_price"
                 android:textColor="#000"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +126,7 @@
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginRight="4dp"
-                android:text="Available:"
+                android:text="@string/available"
                 app:layout_constraintEnd_toStartOf="@+id/tvQuantityOrderItemSelected"
                 app:layout_constraintTop_toTopOf="parent" />
 

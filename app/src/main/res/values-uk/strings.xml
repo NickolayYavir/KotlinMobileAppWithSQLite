@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Сховище</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="group">Група:</string>
+    <string name="product">Товар:</string>
+    <string name="quantity">Кількість:</string>
+    <string name="unit">Одиниця:</string>
+    <string name="price">Ціна:</string>
+    <string name="charge">Націнка:</string>
+    <string name="update_item">Оновити товар</string>
+    <string name="string">Строка</string>
+    <string name="integer">Ціле число</string>
+    <string name="decimal_0_00">Дробове число 0.00</string>
+    <string name="delete">Видалити</string>
+    <string name="update">Оновити</string>
+    <string name="no_data">Немає даних</string>
+    <string name="selling_price_sum">Сума ринкової ціни:</string>
+    <string name="basic_price_sum">Сума закупівельної ціни:</string>
+    <string name="found">Знайдено:</string>
+    <string name="number_of_all_positions">К-сть позицій:</string>
+    <string name="leftover_goods_list">Звіт залишків</string>
+    <string name="order_list">Звіт продаж</string>
+    <string name="storage">Сховище</string>
+    <string name="report">Реалізувати</string>
+    <string name="archive">Архів</string>
+    <string name="analysis">Аналіз</string>
+    <string name="info">Звіти</string>
+    <string name="setting">Налаштування</string>
+    <string name="menu">Меню</string>
+    <string name="number_of_all_positions2">К-сть позицій:</string>
+    <string name="order">Реалізувати</string>
+    <string name="cancel">Відмінити</string>
+    <string name="date">Дата:</string>
+    <string name="selling_price">Ринкова ціна:</string>
+    <string name="basic_price">Закупівельна ціна:</string>
+    <string name="extra_charge">Націнка:</string>
+    <string name="total">Сума:</string>
+    <string name="total_selling_price">Сума закупівельної ціни:</string>
+    <string name="selling_date">Дата продажу:</string>
+    <string name="available">В наявності:</string>
+    <string name="selected">Вибрано:</string>
+    <string name="save">Зберегти</string>
+    <string name="sort_by">Сортувати:</string>
+    <string name="sorting_method">Метод Сортування</string>
+    <string name="choose_sort_method">Оберіть метод сортування</string>
+    <string name="descending">Спадний</string>
+    <string name="ascending">Висхідний</string>
+    <string name="apply">Примінити</string>
+    <string name="search">Пошук</string>
+    <string name="add_element">Додати</string>
+    <string name="sort_table">Сортувати</string>
+    <string name="delete_all">Видалити Таблицю</string>
+
+</resources>

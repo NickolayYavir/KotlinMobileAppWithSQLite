@@ -33,11 +33,6 @@ class OrderActivity : AppCompatActivity() {
         myDbManager.openDb()
         storeDataInArrays(myDbManager.readData())
 
-     /*   storeDataInArrays(myDbManager.sortData(
-            BdActivity.sortMarkerColumn,
-            BdActivity.sortMarkerMethod
-        ))*/
-
         tvNumberOfPosition.text = allProductData.size.toString()
 
         val customAdapter = CustomAdapterForOrder(this,this,displayList)

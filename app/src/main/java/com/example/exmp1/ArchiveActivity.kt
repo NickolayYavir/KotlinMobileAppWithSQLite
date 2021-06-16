@@ -22,7 +22,8 @@ class ArchiveActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_archive)
         myOrderDbManager.openDb()
-        storeDataInArrays(myOrderDbManager.readData())
+        storeDataInArrays(myOrderDbManager.sortData())
+        displayList.addAll(myOrderDbManager.sortDataDesc())
 
         val customAdapter = CustomAdapterForArchive(this, displayList)
         recyclerViewArchive.adapter = customAdapter
@@ -37,9 +38,7 @@ class ArchiveActivity : AppCompatActivity() {
         }else{
 
             allArchiveData.clear()
-            displayList.clear()
             allArchiveData.addAll(dataList)
-            displayList.addAll(dataList)
             imgNoData.visibility = View.GONE
             tvNoData.visibility = View.GONE
         }

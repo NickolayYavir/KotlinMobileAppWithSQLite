@@ -1,10 +1,13 @@
 package com.example.exmp1
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.exmp1.db.BdActivity
+import com.example.vicky.multilanguageexample.MyContextWrapper
+import com.example.vicky.multilanguageexample.MyPreference
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,20 +34,26 @@ class MainActivity : AppCompatActivity() {
 
         val buttonAnalysis: Button = findViewById(R.id.button_analysis)
         buttonAnalysis.setOnClickListener{
-            val intent = Intent(this, BdActivity::class.java)
+            val intent = Intent(this, AnalysisActivity::class.java)
             startActivity(intent)
         }
 
         val buttonInfo: Button = findViewById(R.id.button_info)
         buttonInfo.setOnClickListener{
-            val intent = Intent(this, BdActivity::class.java)
+            val intent = Intent(this, CreateFIleActivity::class.java)
             startActivity(intent)
         }
 
         val buttonSetting: Button = findViewById(R.id.button_setting)
         buttonSetting.setOnClickListener{
-            val intent = Intent(this, BdActivity::class.java)
+            val intent = Intent(this, SettingActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun attachBaseContext(newBase: Context?) {
+        val myPreference = MyPreference(newBase!!)
+        val lang: String = myPreference.getLoginCount()
+        super.attachBaseContext(MyContextWrapper.wrap(newBase,lang))
     }
 }

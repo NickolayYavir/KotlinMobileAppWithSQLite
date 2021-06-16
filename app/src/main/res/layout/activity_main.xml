@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="MENU"
+        android:text="@string/menu"
         android:textColor="#fff"
         android:textStyle="bold"
         android:textSize="30sp"
@@ -59,7 +59,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Storage"
+                    android:text="@string/storage"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:layout_gravity="center_horizontal"/>
@@ -98,7 +98,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Report"
+                    android:text="@string/report"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:layout_gravity="center_horizontal"/>
@@ -137,7 +137,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Archive"
+                    android:text="@string/archive"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:layout_gravity="center_horizontal"/>
@@ -176,7 +176,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Analysis"
+                    android:text="@string/analysis"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:layout_gravity="center_horizontal"/>
@@ -215,7 +215,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Info"
+                    android:text="@string/info"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:layout_gravity="center_horizontal"/>
@@ -254,7 +254,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Setting"
+                    android:text="@string/setting"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:layout_gravity="center_horizontal"/>

@@ -57,10 +57,30 @@ class MyOrderDbManager(private val context: Context) {
         return dataList
     }
 
-    fun sortData(sortedBy :String, sortedMethod :String) : ArrayList<DbOrderData> {
-
+    fun sortData() : ArrayList<DbOrderData>{
         val dataList = ArrayList<DbOrderData>()
-        val cursor = db?.query(MyDbNameClass.TABLE_NAME, null, null, null, null, null, sortedBy + sortedMethod)
+        val cursor = db?.query(MyDbOrderClass.TABLE_NAME,null,null,null,null,null,"${MyDbOrderClass.COLUMN_SELLING_DATE} ASC" )
+
+        while(cursor?.moveToNext()!!){
+            val dataId = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_ID))
+            val dataProduct = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_PRODUCT))
+            val dataGroup = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_GROUP))
+            val dataQuantity = cursor.getInt(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_QUANTITY))
+            val dataUnits = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_UNITS))
+            val dataPrice = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_PRICE))
+            val dataCharge = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_EXTRA_CHARGE))
+            val dataSellingPrice = cursor.getFloat(cursor.getColumnIndex(MyDbOrderClass.COLUMN_SELLING_PRICE))
+            val dataSellingDate = cursor.getLong(cursor.getColumnIndex(MyDbOrderClass.COLUMN_SELLING_DATE))
+            dataList.add(DbOrderData(dataId,dataProduct,dataGroup,dataQuantity,dataUnits,dataPrice,dataCharge,dataSellingPrice,dataSellingDate))
+        }
+        cursor.close()
+        return dataList
+    }
+
+    fun sortDataDesc() : ArrayList<DbOrderData>{
+        val dataList = ArrayList<DbOrderData>()
+        val cursor = db?.query(MyDbOrderClass.TABLE_NAME,null,null,null,null,null,"${MyDbOrderClass.COLUMN_SELLING_DATE} DESC" )
+
         while(cursor?.moveToNext()!!){
             val dataId = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_ID))
             val dataProduct = cursor.getString(cursor.getColumnIndex(MyDbOrderClass.COLUMN_NAME_PRODUCT))

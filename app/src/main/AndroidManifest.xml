@@ -9,6 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Exmp1">
+        <activity android:name=".SettingActivity"
+            android:label="Setting"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".AnalysisActivity"
+            android:label="Analysis"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CreateFIleActivity"
+            android:label="Create File"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ArchiveActivity"
             android:label="Archive"
