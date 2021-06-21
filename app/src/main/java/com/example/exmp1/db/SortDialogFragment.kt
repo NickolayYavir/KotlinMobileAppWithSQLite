@@ -13,13 +13,17 @@ import kotlinx.android.synthetic.main.dialogfragment_sort.view.*
 
 class SortDialogFragment: DialogFragment() {
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        dialog?.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        super.onActivityCreated(savedInstanceState)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val rootView: View = inflater.inflate(R.layout.dialogfragment_sort, container, false)
-
         rootView.btnSortCancel.setOnClickListener {
             dismiss()
         }

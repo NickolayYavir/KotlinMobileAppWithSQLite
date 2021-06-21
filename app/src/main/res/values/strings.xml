@@ -22,14 +22,14 @@
     <string name="leftover_goods_list">Leftover Goods List</string>
     <string name="order_list">Order List</string>
     <string name="storage">Storage</string>
-    <string name="report">Report</string>
+    <string name="report">Sell</string>
     <string name="archive">Archive</string>
     <string name="analysis">Analysis</string>
     <string name="info">Info</string>
     <string name="setting">Setting</string>
     <string name="menu">MENU</string>
     <string name="number_of_all_positions2">Number of all positions:</string>
-    <string name="order">Order</string>
+    <string name="order">Sell</string>
     <string name="cancel">Cancel</string>
     <string name="date">Date:</string>
     <string name="selling_price">Selling Price:</string>
@@ -51,4 +51,6 @@
     <string name="add_element">Add Element</string>
     <string name="sort_table">Sort Table</string>
     <string name="delete_all">Delete All</string>
+    <string name="FilePath">You can find your files in Documents directory</string>
+    <string name="choose_language">Choose language</string>
 </resources>

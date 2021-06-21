@@ -5,6 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
+import androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode
 import com.example.exmp1.db.BdActivity
 import com.example.vicky.multilanguageexample.MyContextWrapper
 import com.example.vicky.multilanguageexample.MyPreference
@@ -12,6 +14,7 @@ import com.example.vicky.multilanguageexample.MyPreference
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setDefaultNightMode(MODE_NIGHT_NO);
         setContentView(R.layout.activity_main)
 
         val buttonStorage: Button = findViewById(R.id.button_storage)

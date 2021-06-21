@@ -9,7 +9,7 @@
     <string name="unit">Одиниця:</string>
     <string name="price">Ціна:</string>
     <string name="charge">Націнка:</string>
-    <string name="update_item">Оновити товар</string>
+    <string name="update_item">Оновити</string>
     <string name="string">Строка</string>
     <string name="integer">Ціле число</string>
     <string name="decimal_0_00">Дробове число 0.00</string>
@@ -40,7 +40,7 @@
     <string name="total_selling_price">Сума закупівельної ціни:</string>
     <string name="selling_date">Дата продажу:</string>
     <string name="available">В наявності:</string>
-    <string name="selected">Вибрано:</string>
+    <string name="selected">Обрано:</string>
     <string name="save">Зберегти</string>
     <string name="sort_by">Сортувати:</string>
     <string name="sorting_method">Метод Сортування</string>
@@ -52,5 +52,7 @@
     <string name="add_element">Додати</string>
     <string name="sort_table">Сортувати</string>
     <string name="delete_all">Видалити Таблицю</string>
+    <string name="FilePath">Ви сможете знайти ці файли у папці "Documents"</string>
+    <string name="choose_language">Оберіть мову</string>
 
 </resources>

@@ -1,19 +1,17 @@
 package com.example.exmp1
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import com.example.vicky.multilanguageexample.MyContextWrapper
 import com.example.vicky.multilanguageexample.MyPreference
 import kotlinx.android.synthetic.main.activity_setting.*
 
 class SettingActivity : AppCompatActivity() {
 
     lateinit var myPreference: MyPreference
-    var languageList = arrayOf("uk","en")
+    var languageList = arrayOf("en","uk")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

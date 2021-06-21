@@ -20,6 +20,7 @@
 
             <TextView
                 android:id="@+id/tvTotalBasicPrice"
+                android:minWidth="70dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -33,6 +34,7 @@
 
             <TextView
                 android:id="@+id/tvTotalSellingPrice"
+                android:minWidth="70dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -73,6 +75,7 @@
                 android:id="@+id/tvProductName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minWidth="70dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginLeft="4dp"
                 android:layout_marginTop="4dp"
@@ -86,6 +89,7 @@
 
             <TextView
                 android:id="@+id/tvGroupName"
+                android:minWidth="70dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -99,6 +103,7 @@
 
             <TextView
                 android:id="@+id/tvPrice"
+                android:minWidth="70dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -112,6 +117,7 @@
 
             <TextView
                 android:id="@+id/tvQuantity"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -204,6 +210,7 @@
 
             <TextView
                 android:id="@+id/tvSellingPrice"
+                android:minWidth="70dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"

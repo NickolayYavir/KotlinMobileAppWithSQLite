@@ -84,6 +84,8 @@ class BdActivity : AppCompatActivity(), BdInterface{
         return super.onCreateOptionsMenu(menu)
     }
 
+
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.delete_all){
             confirmDeleteAllDialog()

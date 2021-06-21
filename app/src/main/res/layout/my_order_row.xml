@@ -34,6 +34,7 @@
             <TextView
                 android:id="@+id/tvProductNameOrder"
                 android:layout_width="wrap_content"
+                android:minWidth="70dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginLeft="4dp"
@@ -54,6 +55,7 @@
                 android:layout_marginLeft="6dp"
                 android:layout_marginTop="6dp"
                 android:text="Group name"
+                android:minWidth="70dp"
                 android:textColor="#000"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/textViewOrder"
@@ -74,6 +76,7 @@
 
             <TextView
                 android:id="@+id/tvUnitsOrder"
+                android:minWidth="40dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -100,6 +103,7 @@
 
             <TextView
                 android:id="@+id/tvSellingPriceOrder"
+                android:minWidth="70dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
